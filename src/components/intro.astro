@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import FluentEmojiHighContrastPigFace from "./FluentEmojiHighContrastPigFace.astro";
+---
+
+<ContentSection title="Circle T BBQ" id="intro">
+  <!-- <Icon slot="eyebrow" name="logomark" class="size-32" /> -->
+  <FluentEmojiHighContrastPigFace slot="eyebrow" />
+  <Fragment slot="lead">
+   Where <span class="text-primary">smoke</span> meets <span class="text-primary">soul</span>, and every bite tells a <span class="text-primary">savory</span> story. 
+   We offer <span class="text-primary">barbecue bliss</span> to the Belleville, ON area..
+  </Fragment>
+  <Fragment slot="subheading">
+   You can find us Monday to Friday from 10am to 5pm at Zwicks Park at 10 Bay Bridge Road, Belleville ON. Come down and try our famous hot dogs and sausages and enjoy a stroll on the Bay of Quinte. We will be here all summer long and we look forward to serving you 🔥🔥🔥 this year.
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="#about"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:telescope" class="size-8" />
+      <span>Learn more</span>
+    </a>
+    <a
+      href="#contact"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:rocket" class="size-8" />
+      <span>Get in touch</span>
+    </a>
+  </div>
+</ContentSection>
