@@ -6,12 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && wrangler pages deploy",
-    "preview": "astro build && wrangler pages dev",
-    "astro": "astro",
-    "format": "prettier --write **/*.astro .",
-    "clean": "rimraf dist .astro node_modules",
-    "cf-typegen": "wrangler types"
+    "build": "astro build",
+    "preview": "astro build",
+    "astro": "astro"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
@@ -25,8 +22,7 @@
     "prettier-plugin-tailwindcss": "^0.5.14",
     "rimraf": "^5.0.5",
     "tailwindcss-fluid-type": "^2.0.6",
-    "@cloudflare/workers-types": "^4.20240502.0",
-    "wrangler": "^3.53.1"
+    "@cloudflare/workers-types": "^4.20240502.0"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^10.2.5",
