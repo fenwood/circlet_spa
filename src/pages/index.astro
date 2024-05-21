@@ -10,8 +10,9 @@ import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 
-const { generator, site } = Astro;
-const image = new URL("social.png", site);
+
+const { generator, site } = Astro.props;
+// const image = new URL("social.png", site);
 const description =
   "Circle T BBQ | Hot dogs, smoked meat and more.";
 ---
@@ -31,7 +32,7 @@ const description =
     <meta property="og:title" content="Circle T BBQ" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content="/social.png" />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
 
