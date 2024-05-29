@@ -1,0 +1,71 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+const { slug } = Astro.params;
+
+
+if(slug === undefined) {
+    throw new Error('Slug is required')
+}
+
+const entry = await getEntry('recipes', slug);
+// const { entry } = Astro.props;
+
+if (entry === undefined) {
+    return Astro.redirect('/404');
+}
+
+/* Get data - use for static sites, not required for SSR  */
+// export async function getStaticPaths() {
+//     const allBlogArticles: CollectionEntry<'recipe'>[] = await getCollection('recipe');
+
+//     return allBlogArticles.map(entry => ({
+//         params: {
+//             slug: entry.slug
+//         },
+//         props: {entry}
+//     }));
+// }
+
+
+const { Content } = await entry.render();
+
+---
+<MainLayout title={entry.data.title}>
+      <a href="/recipes" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Back</a>
+      <article>
+        <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
+        <h3 class="text-lg mb-2">{entry.data.shortDescription} </h3>
+
+
+        <img src={ entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+        <div class="recipe_content">
+        <Content />
+    </div>
+
+      </article>
+
+</MainLayout>
+
+<style is:global>
+p {
+    margin: 20px 0;
+}
+h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+h3 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.recipe_content li {
+    list-style-type: disc;
+}
+
+</style>
+

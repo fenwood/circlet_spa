@@ -11,6 +11,17 @@ const showcase = defineCollection({
     }),
 });
 
+const recipeCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    image: z.string(),
+    pubDate: z.date(),
+    shortDescription: z.string(),
+  })
+})
+
 export const collections = {
   showcase,
+  recipes:recipeCollection,
 };

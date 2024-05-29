@@ -6,6 +6,7 @@ import { defineConfig, passthroughImageService } from "astro/config";
 export default defineConfig({
   site: "https://astro-moon-landing.netlify.app/",
   integrations: [tailwind(), icon()],
+  output: 'server',
   image: { 
      service: passthroughImageService(),
   },
