@@ -1,6 +1,6 @@
 ---
 title: 'Smoked Jerk Chicken'
-image: '/src/content/recipes/_images/recipe-jerk-chicken.jpg'
+image: '/src/content/showcase/_images/recipe-jerk-chicken.jpg'
 pubDate: 2024-05-01
 shortDescription: 'Spicy and smoky jerk chicken, one of our favourite smoking dishes.'
 slug: jerk-chicken
