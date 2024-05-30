@@ -1,6 +1,6 @@
 ---
 title: 'Pulled Pork'
-image: '/src/content/recipes/_images/recipe-pork.jpg'
+image: '/images/recipe-pork.jpg'
 pubDate: 2024-05-01
 shortDescription: 'This recipe is ideal for family gatherings, weekend barbecues, or any time you want to enjoy a true barbecue classic.'
 slug: pulled-pork

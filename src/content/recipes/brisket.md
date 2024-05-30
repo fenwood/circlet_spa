@@ -1,6 +1,6 @@
 ---
 title: 'Smoked Brisket'
-image: '/src/content/recipes/_images/recipe-brisket.jpg'
+image: '/images/recipe-brisket.jpg'
 pubDate: 2024-05-01
 shortDescription: 'Tender, juicy, and flavorful Texas-style smoked brisket, perfect for serving at a barbecue or family gathering.'
 slug: brisket

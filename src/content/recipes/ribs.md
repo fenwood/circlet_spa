@@ -1,6 +1,6 @@
 ---
 title: 'Smoked Ribs'
-image: '/src/content/recipes/_images/recipe-ribs.jpg'
+image: '/images/recipe-ribs.jpg'
 pubDate: 2024-05-01
 shortDescription: 'Flavorful, and juicy Texas-style smoked baby back ribs, perfect for a delicious barbecue meal.'
 slug: smoked-ribs
